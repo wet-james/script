@@ -1,0 +1,222 @@
+loadstring(game:HttpGet("https://gist.githubusercontent.com/wet-james/2a208fb734980608da7763a767e94b02/raw"))()--Intro
+wait(2.5)
+local Bilada = loadstring(game:HttpGet("https://gist.githubusercontent.com/wet-james/3d5e54f36eb5200eef449572de5637a4/raw"))()
+local BiladaWindow = Bilada.new(false,"Bilada Scripts - Public Test Version") --true para dark theme
+BiladaWindow.ChangeToggleKey(Enum.KeyCode.RightControl)--muda o botão pra fechar o gui(ainda nao ta pegando)
+-----------------------------------------Categorias
+local MainCategory = BiladaWindow:Category("Main")
+local CreditsCategory = BiladaWindow:Category("Credits")
+--------------------------------------SubCategorias
+--SubCategoriasDeMorioh
+local Main = MainCategory:Sector("Main")
+--SubCategoriasDeCredits
+local Credits =  CreditsCategory:Sector("Credits")
+---------------------------------------------------tpbypass
+local metatable = getrawmetatable(game)
+local namecall = metatable.__namecall 
+setreadonly(metatable,false)
+metatable.__namecall = newcclosure(function(self,...)
+    local args = {...} 
+    local method = getnamecallmethod()
+    if method == "InvokeServer" then 
+        if args[1] == "idklolbrah2de" then
+            return "  ___XP DE KEY"
+        elseif  args[1] == "SigL" or method:lower() == "kick"  then
+            return wait(9e9)
+          end 
+      end 
+     return namecall(self,...)
+end ) 
+
+local metatable = getrawmetatable(game)
+local index = metatable.__index
+setreadonly(metatable, false)
+metatable.__index = newcclosure(function(t, k)
+    if t == "Humanoid" and k == "WalkSpeed" then
+        return 16
+    elseif t == "Humanoid" and k == "JumpPower" then
+        return 50
+    end
+    return index(t, k)
+end)
+--locals
+local TweenService = game:GetService("TweenService")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local LocalPlayerName =  game:GetService("Players").LocalPlayer.Name
+local Players = game:GetService("Players")
+local BillboardGui = Instance.new("BillboardGui")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel2 = Instance.new("TextLabel")
+local TextLabel3 = Instance.new("TextLabel")
+--Cheats
+---------------------Checkbox
+Main:Cheat("Checkbox","Esp Items",function(Esp)
+   if Esp == true
+ then espitos = true
+while wait () do
+  if espitos == true then
+function CreateESPPart(BodyPart,color)
+local ESPPartparent = BodyPart
+local Box = Instance.new("BoxHandleAdornment")
+Box.Size = BodyPart.Size + Vector3.new(0.1, 0.1, 0.1)
+Box.Name = "ESPPart"
+Box.Adornee = ESPPartparent
+Box.Color3 = color
+Box.AlwaysOnTop = true
+Box.ZIndex = 5
+Box.Transparency = 0.3
+Box.Parent = BodyPart
+end
+
+local bodypart = game.Workspace.Item_Spawns.Items:getChildren()
+for i=1,#bodypart do
+if bodypart[i]:IsA("Model") then
+for i,item in pairs (bodypart[i]:getChildren()) do
+if item:IsA("MeshPart") or item:IsA("Part") then
+if not item:FindFirstChild("ESPPart") then
+if item.Transparency == 0 or item.Transparency == 0.5 then
+CreateESPPart(item, Color3.fromRGB(255, 0, 191))
+end
+end
+end
+end
+end
+end
+end
+end
+     else if Esp == false then 
+         espitos = false
+         for i,v in pairs (game.Workspace.Item_Spawns.Items:GetDescendants()) do
+            if v.Name == "ESPPart" then
+            v:Destroy()
+            end
+    end
+     end
+     end
+end)
+Main:Cheat("Checkbox","ESP Players",function(espPlayer)
+if (espPlayer) == true then
+_G.femboyTrap = game:GetService"RunService".RenderStepped:Connect(function()
+    for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+        if v ~= game:GetService("Players").LocalPlayer then
+        if not v.Character.HumanoidRootPart:FindFirstChild("FemboyJamesUwU") then
+        repeat wait() until v.Character:FindFirstChild("Humanoid")
+          local BillboardGui = Instance.new("BillboardGui")
+          local TextLabel = Instance.new("TextLabel")
+          local TextLabel2 = Instance.new("TextLabel")
+          local TextLabel3 = Instance.new("TextLabel")
+           BillboardGui.Name = "FemboyJamesUwU"
+           BillboardGui.Active = true
+           BillboardGui.AlwaysOnTop = true
+           BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+           BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+           BillboardGui:Clone().Parent = v.Character.HumanoidRootPart
+           TextLabel.Parent = v.Character.HumanoidRootPart:FindFirstChild("FemboyJamesUwU")
+           TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+           TextLabel.BackgroundTransparency = 1.000
+           TextLabel.Size = UDim2.new(0, 200, 0, 50)
+           TextLabel.Font = Enum.Font.SourceSansBold
+           TextLabel.TextColor3 = Color3.fromRGB(0, 100, 255)
+           TextLabel.TextSize = 18
+           TextLabel.Text = v.Name
+          TextLabel3.Parent = v.Character.HumanoidRootPart:FindFirstChild("FemboyJamesUwU")
+           TextLabel3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+           TextLabel3.BackgroundTransparency = 1.000
+           TextLabel3.Size = UDim2.new(0, 200, 0, 70)
+           TextLabel3.Font = Enum.Font.SourceSansBold
+           TextLabel3.TextColor3 = Color3.fromRGB(0, 100, 255)
+           TextLabel3.TextSize = 18
+           TextLabel3.Text = (v.PlayerStats.Stand.value)
+           TextLabel2.Parent = v.Character.HumanoidRootPart:FindFirstChild("FemboyJamesUwU")
+           TextLabel2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+           TextLabel2.BackgroundTransparency = 1.000
+           TextLabel2.Size = UDim2.new(0, 200, 0, 100)
+           TextLabel2.Font = Enum.Font.SourceSansBold
+           TextLabel2.TextColor3 = Color3.fromRGB(0, 100, 255)
+           TextLabel2.TextSize = 18
+           while true do wait()
+           TextLabel2.Text = tostring(math.abs(game.Workspace.Living[v.Name].Health.value))
+           end
+        end
+       end
+end
+end)
+else if (espPlayer) == false then
+_G.femboyTrap:Disconnect()
+for i,v in pairs (game.Workspace.Living:GetDescendants()) do
+            if v.Name == "FemboyJamesUwU" then
+            v:Destroy()
+            end
+end
+end
+end
+end)
+Main:Cheat("Checkbox","Item Farm",function(ItemFarm)
+if ItemFarm == true then
+getgenv().teleporteren = true;
+while getgenv().teleporteren == true do wait()
+for i,v in pairs(game.Workspace.Item_Spawns.Items:GetDescendants()) do
+   if v:IsA("MeshPart") or v:IsA("Part") then
+   if v.Transparency == 0 or v.Transparency == 0.5 then
+      if ItemFarm == true then
+LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+wait(1)
+LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+fireclickdetector(v.Parent.ClickDetector)
+wait(2)
+      end
+end
+   end
+end
+end
+else if (ItemFarm) == false then 
+getgenv().teleporteren =false
+end
+end
+end)
+Main:Cheat("Button","anti burn",function()
+local race = game.Players.LocalPlayer.PlayerStats.Race
+if race.Value == "Vampire" then
+race.Value = "Human"
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+end)
+
+Main:Cheat("Checkbox","remove fog",function(fog)
+while fog do wait()
+game.Lighting.FogEnd = 1000000
+   if game.Lighting:FindFirstChildOfClass("BlurEffect") then
+       game.Lighting:FindFirstChildOfClass("BlurEffect"):Destroy()
+   end
+ end
+end)
+Main:Cheat("Slider", "Speed",function(speed)
+getgenv().femboynudes = (speed)
+local Plrs = game:GetService("Players")
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+if MyChar then
+local Hum = MyChar.Humanoid
+Hum.Changed:connect(function()
+Hum.WalkSpeed = getgenv().femboynudes
+end)
+Hum.WalkSpeed = getgenv().femboynudes
+end
+end,{min = 0, max = 200, suffix = " Km/h"})
+
+Main:Cheat("Slider", "jump",function(jump)
+getgenv().femboytights = (jump)
+local Plrs = game:GetService("Players")
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+if MyChar then
+local Hum = MyChar.Humanoid
+Hum.Changed:connect(function()
+Hum.JumpPower = getgenv().femboytights
+end)
+Hum.JumpPower = getgenv().femboytights
+end
+end,{min = 0, max = 200, suffix = "Km/h"})
+
+Credits:Cheat("Label","script made by: james_bilada")
+Credits:Cheat("Label","ui made by: GuiHD")
